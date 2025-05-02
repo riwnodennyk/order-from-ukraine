@@ -2,58 +2,63 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBDFV0C6KF"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBDFV0C6KF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-KBDFV0C6KF');
+  </script>
 
-        gtag('config', 'G-KBDFV0C6KF');
-    </script>
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ukraine Item Forwarding Service</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        // Helper function to delay opening a URL until a gtag event is sent.
-        // Call it in response to an action that should navigate to a URL.
-        function gtagSendEvent(url) {
-            var callback = function () {
-                if (typeof url === 'string') {
-                    window.location = url;
-                }
-            };
-            gtag('event', 'buy_button_clicked', {
-                'event_callback': callback,
-                'event_timeout': 2000,
-                // <event_parameters>
-            });
-            return false;
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ukraine Item Forwarding Service</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function gtagSendEvent(url) {
+      const callback = function () {
+        if (typeof url === 'string') {
+          window.location = url;
         }
-    </script>
+      };
+      gtag('event', 'buy_button_clicked', {
+        'event_callback': callback,
+        'event_timeout': 2000,
+      });
+      return false;
+    }
+  </script>
 </head>
 
-<body class="bg-gray-50 text-gray-800 font-sans flex items-center justify-center min-h-screen p-6">
-    <div class="max-w-xl text-center bg-white shadow-xl rounded-2xl p-8">
-        <h1 class="text-3xl font-bold mb-4">Need something shipped from Ukraine?</h1>
-        <p class="text-lg mb-4">
-            Some Ukrainian stores don't offer international shipping. I can help!
-        </p>
-        <ul class="text-left list-disc list-inside mb-4 text-md">
-            <li>Send me the link to the items you'd like to buy.</li>
-            <li>I'll order it for you and forward it to your address abroad.</li>
-            <li>My service flat fee is <strong>€15</strong>.</li>
-        </ul>
-        <p class="text-lg mb-6">
-            Message me on Instagram to get started!
-        </p>
-        <a href="#" onclick="return gtagSendEvent('https://instagram.com/riwnodennyk')"
-            class="inline-block bg-pink-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-pink-700 transition">
-            📦 Message me on Instagram
-        </a>
-    </div>
+<body class="bg-gradient-to-br from-gray-100 to-gray-200 text-gray-800 font-sans min-h-screen flex items-center justify-center p-6">
+  <div class="max-w-xl w-full bg-white rounded-3xl shadow-2xl p-8 md:p-10 text-center space-y-6">
+    <h1 class="text-4xl font-extrabold text-gray-900 leading-tight">
+      Need something shipped from Ukraine?
+    </h1>
+
+    <img src="social-photo.png" alt="Social promo" class="w-full h-auto rounded-xl shadow-md mx-auto max-h-64 object-cover" />
+
+    <p class="text-lg text-gray-700">
+      Some Ukrainian stores don’t offer international shipping. I can help!
+    </p>
+
+    <ul class="text-left list-disc list-inside text-md text-gray-600 space-y-2">
+      <li>Send me the link to the items you'd like to buy.</li>
+      <li>I'll order them and forward to your international address.</li>
+      <li>My flat service fee is <strong>€15</strong>.</li>
+    </ul>
+
+    <p class="text-md font-medium text-gray-700">
+      Message me on Instagram to get started!
+    </p>
+
+    <a href="#" onclick="return gtagSendEvent('https://instagram.com/riwnodennyk')"
+      class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:scale-105">
+      📦 Message me on Instagram
+    </a>
+  </div>
 </body>
 
 </html>
